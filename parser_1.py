@@ -1,6 +1,12 @@
 import os
 import re
 
+# phil
+folder_path = 'C:\\Users\\phill\\GitHub\\Project-Analysis'
+
+#luchas
+#folder path = 'Luchas-path'
+
 regex_comment = r'(?:/\*(?:[^*]|(?:\*+[^*/]))*\*+/)|(?://.*)'
 regex_import = r'import\s+([a-zA-Z0-9_.]+);'
 regex_import_solo = r'(?<=import\s)[a-zA-Z0-9_.*]+;'
@@ -21,7 +27,6 @@ def find_imports(file_path):
 
 def main():
     # Replace with your folder path
-    folder_path = 'C:\\Users\\phill\\GitHub\\Project-Analysis'
     for root, dirs, files in os.walk(folder_path):
         for file in files:
             if file.endswith('.java'):
